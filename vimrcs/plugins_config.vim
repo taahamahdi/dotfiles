@@ -156,20 +156,44 @@ let g:go_fmt_command = "goimports"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ale_linters_explicit = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_lint_delay = 500
+let g:ale_sign_error = '!!'
+let g:ale_sign_warning = '--'
+let g:ale_lint_on_enter = 1
+
+let g:ale_virtualtext_prefix = "-> "
+
+nmap <leader>ge  <Plug>(ale_detail)
+
 let g:ale_linters = {
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'qml': ['qmllint']
 \}
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
+let g:C_CFlags = 'std=c++17 -Wall'
+let g:ale_cpp_cpplint_options = '--filter=-whitespace/parens, whitespace/braces'
 
-" Disabling highlighting
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+
+" Set this in your vimrc file to disabling highlighting
 let g:ale_set_highlights = 0
 
-" Only run linting when saving the file
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
+" We don't need live linting.
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+
+" Use the virtual text to show errors. Coc.nvim redirects the errors to
+" ale, so this is useful.
+let g:ale_virtualtext_cursor = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

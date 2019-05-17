@@ -30,6 +30,33 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Allow mouse interaction
+set mouse=a
+
+" Show line numbers
+set number
+
+" Line at 80 characters
+highlight ColorColumn ctermbg=magenta "set to whatever you like
+call matchadd('ColorColumn', '\%81v', 100) "set column nr
+
+" External vimrc's (for tags)
+set exrc
+
+" Copy to clipboard
+set clipboard=unnamed
+
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+
+" Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -42,7 +69,7 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
+let mapleader = "\\"
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -65,6 +92,7 @@ source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
 " Turn on the Wild menu
+set wildmode=longest,list,full
 set wildmenu
 
 " Ignore compiled files
