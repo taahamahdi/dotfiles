@@ -30,18 +30,31 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use a.vim
+source ~/.vim_runtime/vimrcs/a.vim
+
 " Allow mouse interaction
 set mouse=a
 
 " Show line numbers
-set number
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 " Line at 80 characters
 highlight ColorColumn ctermbg=magenta "set to whatever you like
 call matchadd('ColorColumn', '\%81v', 100) "set column nr
 
 " External vimrc's (for tags)
-set exrc
+" set exrc
+" Broken -- workaround:
+let $TAGSRC = '/Users/t_mahdt/alias/studio/'
+set tags=/Users/t_mahdt/alias/studio/build/mtags_l
+
 
 " Copy to clipboard
 set clipboard=unnamed
@@ -136,6 +149,7 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch 
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 

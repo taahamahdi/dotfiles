@@ -201,3 +201,35 @@ let g:ale_virtualtext_cursor = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-clang-format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clang_format#detect_style_file=1
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" if you install vim-operator-user
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+
+"autocmd FileType c ClangFormatAutoEnable
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => asyncrun.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:asyncrun_open = 15
+noremap <leader>b :AsyncRun awmake build<cr>
+noremap <leader>r :AsyncRun awmake run<cr>
+noremap <leader>br :AsyncRun awmake br<cr>
+noremap <leader>s :AsyncStop<cr>
+
+" F10 to toggle quickfix window
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => errormarker
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:asyncrun_auto = "awmake"
+let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
