@@ -37,7 +37,8 @@ source ~/.vim_runtime/vimrcs/a.vim
 set mouse=a
 
 " Show line numbers
-:set number relativenumber
+"set number relativenumber
+set number
 
 :augroup numbertoggle
 :  autocmd!
