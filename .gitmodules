@@ -28,3 +28,12 @@
 [submodule "my_plugins/qt-support.vim"]
 	path = my_plugins/qt-support.vim
 	url = https://github.com/fedorenchik/qt-support.vim
+[submodule "my_plugins/fzf.vim"]
+	path = my_plugins/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "my_plugins/todo.txt-vim"]
+	path = my_plugins/todo.txt-vim
+	url = https://github.com/freitass/todo.txt-vim
+[submodule "my_plugins/vim-ripgrep"]
+	path = my_plugins/vim-ripgrep
+	url = https://github.com/jremmen/vim-ripgrep

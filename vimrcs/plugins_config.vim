@@ -199,7 +199,7 @@ let g:ale_virtualtext_cursor = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,7 +212,7 @@ noremap <leader>br :AsyncRun awmake br<cr>
 noremap <leader>s :AsyncStop<cr>
 
 " F10 to toggle quickfix window
-nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+nnoremap <F10> :call asyncrun#quickfix_toggle(g:asyncrun_open)<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => errormarker
@@ -288,3 +288,19 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>; :FormatCode clang-format<cr>
 noremap <leader>' :FormatLines clang-format<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => auto-pairs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => commentary.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType cpp setlocal commentstring=//\ %s
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => fzf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=/usr/local/opt/fzf
