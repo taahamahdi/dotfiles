@@ -21,15 +21,16 @@ let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
+map <leader>o :Buffers<cr>
 
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
-
+" map <leader>f :MRU<CR>
+" Replaced with:
+map <leader>f :Files<cr>
 
 """"""""""""""""""""""""""""""
 " => YankStack
@@ -289,12 +290,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 noremap <leader>; :FormatCode clang-format<cr>
 noremap <leader>' :FormatLines clang-format<cr>
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => auto-pairs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => commentary.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -304,3 +299,11 @@ autocmd FileType cpp setlocal commentstring=//\ %s
 " => fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=/usr/local/opt/fzf
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => nvim-gdb
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! StartDebug GdbStartLLDB lldb ~/alias/studio/build/debug/r+d/Alias.app/Contents/MacOS/Alias
+
+noremap <leader>d :StartDebug<cr>

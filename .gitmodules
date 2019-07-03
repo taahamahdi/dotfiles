@@ -37,3 +37,6 @@
 [submodule "my_plugins/vim-ripgrep"]
 	path = my_plugins/vim-ripgrep
 	url = https://github.com/jremmen/vim-ripgrep
+[submodule "sources_non_forked/nvim-gdb"]
+	path = sources_non_forked/nvim-gdb
+	url = https://github.com/sakhnik/nvim-gdb
