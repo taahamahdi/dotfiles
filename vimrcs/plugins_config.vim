@@ -307,3 +307,10 @@ set rtp+=/usr/local/opt/fzf
 command! StartDebug GdbStartLLDB lldb ~/alias/studio/build/debug/r+d/Alias.app/Contents/MacOS/Alias
 
 noremap <leader>d :StartDebug<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-lsp-cxx-highlight
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:lsp_cxx_hl_log_file = '/tmp/vim-lsp-cxx-hl.log'
+let g:lsp_cxx_hl_verbose_log = 1
