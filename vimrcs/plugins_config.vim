@@ -314,3 +314,9 @@ noremap <leader>d :StartDebug<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lsp_cxx_hl_log_file = '/tmp/vim-lsp-cxx-hl.log'
 let g:lsp_cxx_hl_verbose_log = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pandoc Preview
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pandoc_preview_pdf_cmd = "zathura" 
+nnoremap <leader>- :PandocCompile<cr>
