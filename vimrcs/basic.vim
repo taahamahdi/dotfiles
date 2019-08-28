@@ -56,8 +56,8 @@ call matchadd('ColorColumn', '\%81v', 100) "set column nr
 " External vimrc's (for tags)
 " set exrc
 " Broken -- workaround:
-let $TAGSRC = '/Users/t_mahdt/alias/studio/'
-set tags=/Users/t_mahdt/alias/studio/build/mtags_l
+" let $TAGSRC = '/Users/t_mahdt/alias/studio/'
+" set tags=/Users/t_mahdt/alias/studio/build/mtags_l
 
 
 " Copy to clipboard

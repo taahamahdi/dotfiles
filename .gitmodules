@@ -37,6 +37,15 @@
 [submodule "my_plugins/vim-ripgrep"]
 	path = my_plugins/vim-ripgrep
 	url = https://github.com/jremmen/vim-ripgrep
+[submodule "my_plugins/cosmic_latte"]
+	path = my_plugins/cosmic_latte
+	url = https://github.com/nightsense/cosmic_latte
+[submodule "my_plugins/vim-lsp-cxx-highlight"]
+	path = my_plugins/vim-lsp-cxx-highlight
+	url = https://github.com/jackguo380/vim-lsp-cxx-highlight
 [submodule "sources_non_forked/nvim-gdb"]
 	path = sources_non_forked/nvim-gdb
 	url = https://github.com/sakhnik/nvim-gdb
+[submodule "sources_non_forked/vim-isort"]
+	path = sources_non_forked/vim-isort
+	url = https://github.com/fisadev/vim-isort
