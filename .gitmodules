@@ -51,4 +51,4 @@
 	url = https://github.com/fisadev/vim-isort
 [submodule "my_plugins/pandoc-preview.vim"]
 	path = my_plugins/pandoc-preview.vim
-	url = https://github.com/lingnand/pandoc-preview.vim
+	url = https://github.com/taahamahdi/pandoc-preview.vim
