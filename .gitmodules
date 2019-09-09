@@ -52,3 +52,6 @@
 [submodule "my_plugins/pandoc-preview.vim"]
 	path = my_plugins/pandoc-preview.vim
 	url = https://github.com/taahamahdi/pandoc-preview.vim
+[submodule "my_plugins/neotex"]
+	path = my_plugins/neotex
+	url = https://github.com/donRaphaco/neotex

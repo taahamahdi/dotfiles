@@ -320,3 +320,15 @@ let g:lsp_cxx_hl_verbose_log = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pandoc_preview_pdf_cmd = "zathura" 
 nnoremap <leader>- :PandocCompile<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Neotex
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neotex_latexdiff = 1
+let g:neotex_pdflatex_alternative = 'xelatex'
+let g:tex_flavor = 'latex'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 1
