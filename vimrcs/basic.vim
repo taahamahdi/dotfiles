@@ -59,10 +59,6 @@ call matchadd('ColorColumn', '\%81v', 100) "set column nr
 " let $TAGSRC = '/Users/t_mahdt/alias/studio/'
 " set tags=/Users/t_mahdt/alias/studio/build/mtags_l
 
-
-" Copy to clipboard
-set clipboard=unnamed
-
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y

@@ -207,7 +207,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " => asyncrun.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:asyncrun_open = 15
-noremap <leader>b :AsyncRun awmake build<cr>
+noremap <leader>b :AsyncRun make<cr>
 noremap <leader>r :AsyncRun awmake run<cr>
 noremap <leader>br :AsyncRun awmake br<cr>
 noremap <leader>s :AsyncStop<cr>
