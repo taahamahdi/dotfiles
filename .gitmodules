@@ -55,3 +55,6 @@
 [submodule "my_plugins/neotex"]
 	path = my_plugins/neotex
 	url = https://github.com/donRaphaco/neotex
+[submodule "my_plugins/discord.nvim"]
+	path = my_plugins/discord.nvim
+	url = https://github.com/ObserverOfTime/discord.nvim
